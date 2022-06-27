@@ -14,6 +14,7 @@ img.feat-prods-feat-image {
     align-content: center;
     align-items: center;
     justify-content: flex-start;
+    min-height: 320px;
 }
 
 h3.feat-prods-title {
@@ -36,23 +37,11 @@ p.feat-prods-exerpt {
 }
 
 p.feat-prods-know-more {
-    /* font-family: "PT Sans"; */
-    /* font-weight: bold; */
-    /* font-size: 16px; */
     letter-spacing: 0.05em;
-    /* text-align: center; */
     color: #fff;
     border-radius: 30px;
     background: #fd746c;
     padding: 10px 20px;
-    /* width: fit-content; */
-    /* margin: 0; */
-}
-
-
-div#feat-prods-carousel {
-    max-width: 69%;
-    margin: auto;
 }
 
 div.owl-item.active img.feat-prods-feat-image:nth-child(4n) {
@@ -119,4 +108,36 @@ div.feat-prods-carousel .owl-nav {
 #feat-prods-carousel button.owl-next {
     position: relative;
     left: 65px;
+}
+
+
+
+/* Mobile Version*/
+
+.feat-prod-carousel .img-container img {
+    border-radius: 90px 10px 0 0;
+}
+
+.feat-prod-carousel .content {
+    padding: 10px 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    background: #fff;
+    min-height: 317px;
+}
+.feat-prod-carousel h3.title {
+    font-family: 'PT Serif';
+    font-weight: 600;
+    font-size: 21px;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+.feat-prod-carousel p.exerpt {
+    font-family: 'PT Sans';
+    font-weight: 400;
+    font-size: 16px;
 }

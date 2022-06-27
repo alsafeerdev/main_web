@@ -4,19 +4,34 @@ jQuery(document).ready(function () {
   jQuery("#portfolio-carousel").owlCarousel({
     lazyLoad: true,
     loop: true,
-    margin: 17,
+    margin: 25,
+    stagePadding: 10,
     items: 1,
     center: true,
     dots: true,
     dotsEach: 3,
-    autoplay: true,
+    autoplay: false,
     nav: true,
     autoplaySpeed: 2500,
     slideTransition: 'ease',
-    autoWidth: true,
+    autoWidth: false,
+    center: true,
     animateOut: 'fadeOut',
     animateIn: 'fadeIn',
     navText: [jQuery('.am-prev'), jQuery('.am-next')],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 1,
+      },
+      1000: {
+        items: 1,
+      }
+    },
   });
 });
 
@@ -37,6 +52,25 @@ jQuery(document).ready(function () {
     slideTransition: 'ease',
     stagePadding: 35,
     navText: [jQuery('.prev-btn'), jQuery('.next-btn')],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        center: false,
+        nav: false,
+        dots: false
+      },
+      600: {
+        items: 2,
+        center: false,
+      },
+      1000: {
+        items: 3,
+      },
+      1800: {
+        items: 3,
+      }
+    },
   });
 });
 
@@ -57,6 +91,21 @@ jQuery(document).ready(function () {
     slideTransition: 'ease',
     stagePadding: 35,
     navText: [jQuery('.prev-btn-light'), jQuery('.next-btn-light')],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+      },
+      600: {
+        items: 2,
+      },
+      1000: {
+        items: 3,
+      },
+      1800: {
+        items: 3,
+      }
+    },
   });
 });
 
@@ -67,8 +116,6 @@ jQuery(document).ready(function () {
     lazyLoad: true,
     loop: true,
     margin: 65,
-    items: 3,
-    center: true,
     dots: true,
     dotsEach: 3,
     autoplay: true,
@@ -77,6 +124,21 @@ jQuery(document).ready(function () {
     slideTransition: 'ease',
     stagePadding: 35,
     navText: [jQuery('.prev-btn-serv'), jQuery('.next-btn-serv')],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+        margin: 45,
+      },
+      600: {
+        items: 2,
+        margin: 45,
+      },
+      1000: {
+        items: 3,
+      }
+    },
   });
 });
 
@@ -87,8 +149,6 @@ jQuery(document).ready(function () {
     lazyLoad: true,
     loop: true,
     margin: 65,
-    items: 3,
-    center: true,
     dots: true,
     dotsEach: 3,
     autoplay: true,
@@ -97,6 +157,21 @@ jQuery(document).ready(function () {
     slideTransition: 'ease',
     stagePadding: 35,
     navText: [jQuery('.prev-btn-serv-dark'), jQuery('.next-btn-serv-dark')],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false,
+        margin: 45,
+      },
+      600: {
+        items: 2,
+        margin: 45,
+      },
+      1000: {
+        items: 3,
+      }
+    },
   });
 });
 
@@ -112,17 +187,36 @@ jQuery(document).ready(function () {
     autoplaySpeed: 2500,
     slideTransition: 'ease',
     navText: [jQuery('.prev-btn-feat-prod'), jQuery('.next-btn-feat-prod')],
+    responsiveClass: true,
     responsive: {
       0: {
         items: 1,
+        nav: false,
+        margin: 45,
       },
       600: {
-        items: 3,
+        items: 2,
+        margin: 45,
       },
       1000: {
         items: 4,
       }
     },
+  });
+});
+
+// Featured Products Carousal Mobile Dev
+
+jQuery(document).ready(function () {
+  jQuery(".feat-prod-carousel").owlCarousel({
+    loop: true,
+    margin: 12,
+    nav: false,
+    dots: false,
+    items: 1,
+    autoplay: true,
+    stagePadding: 10,
+    center: true
   });
 });
 
@@ -150,7 +244,6 @@ jQuery(document).ready(function () {
 jQuery(document).ready(function () {
   jQuery("#clients-carousel").owlCarousel({
     lazyLoad: true,
-    items: 5,
     loop: true,
     center: true,
     dots: true,
@@ -161,5 +254,18 @@ jQuery(document).ready(function () {
     autoplaySpeed: 3000,
     slideTransition: 'linear',
     navText: [jQuery('.prev-btn-clients'), jQuery('.next-btn-clients')],
+    responsiveClass: true,
+    responsive: {
+      0: {
+        items: 1,
+        nav: false
+      },
+      600: {
+        items: 3,
+      },
+      1000: {
+        items: 5,
+      }
+    },
   });
 });

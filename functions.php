@@ -43,8 +43,8 @@ function add_custom_css()
 {
     wp_enqueue_style('bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css', true, true);
     wp_enqueue_style('product-grid-css', get_stylesheet_directory_uri() . '/includes/css/min/product-grid-styles.min.css', true, true);
-    wp_enqueue_style('featured-prod-slider', get_stylesheet_directory_uri() . '/includes/css/min/feature-prod-slider.min.css', true, true,);
-    wp_enqueue_style('combines-styles', get_stylesheet_directory_uri() . '/includes/css/min/combine.min.css', true, true,);
+    wp_enqueue_style('featured-prod-slider', get_stylesheet_directory_uri() . '/includes/css/min/feature-prod-slider.min.css', true, 1.1,);
+    wp_enqueue_style('combines-styles', get_stylesheet_directory_uri() .  '/includes/css/min/combine.min.css', true, true,);
 }
 add_action('wp_enqueue_scripts', 'add_custom_css');
 
@@ -283,4 +283,33 @@ function image_optimize_js()
 }
 
 add_action('wp_enqueue_scripts', 'image_optimize_js');
+
+// add media queries
+
+function media_queries()
+{
+    wp_enqueue_style('media-queries', get_stylesheet_directory_uri() . '/includes/css/min/media.min.css', 'all', 1.8 );
+}
+
+add_action('wp_enqueue_scripts', 'media_queries');
+
+// Disable font awesome 
+
+add_action('elementor/frontend/after_register_styles', function () {
+    foreach (['solid', 'regular', 'brands'] as $style) {
+        wp_deregister_style('elementor-icons-fa-' . $style);
+    }
+}, 20);
+
+
+// Featured Products Carousel for mobile devices
+
+function feat_products_mb()
+{
+    ob_start();
+    get_template_part('includes/featprod', 'm');
+    return ob_get_clean();
+}
+
+add_shortcode('feat-prod-mb', 'feat_products_mb');
 

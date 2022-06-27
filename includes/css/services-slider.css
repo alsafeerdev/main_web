@@ -154,10 +154,6 @@ div.services-carousel>.owl-stage-outer {
     box-shadow: 0px 0px 12px -3px #00000070;
 }
 
-.owl-carousel .owl-stage {
-    display: flex;
-}
-
 /* Services Dark BG */
 
 .prev-btn-serv-dark.service-cust-nav {
@@ -175,20 +171,20 @@ svg.dark-nav-icon {
 
 #services-carousel button.owl-prev {
     position: relative;
-    right: 35px;
+    right: 5px;
 }
 
 #services-carousel button.owl-next {
     position: relative;
-    left: 35px;
+    left: 5px;
 }
 
 #services-carousel-dark button.owl-prev {
     position: relative;
-    right: 35px;
+    right: 5px;
 }
 
 #services-carousel-dark button.owl-next {
     position: relative;
-    left: 35px;
+    left: 5px;
 }

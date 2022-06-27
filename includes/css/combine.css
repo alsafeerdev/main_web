@@ -116,7 +116,27 @@ a.elementor-sub-item.menu-link {
 nav.elementor-pagination {
     display: flex;
     margin-top: 45px;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+a.page-numbers {
+    margin-top: 10px;
+    padding: 3px 10px;
+}
+
+span.page-numbers.current {
+    padding: 3px 10px;
+}
+
+a.page-numbers.next {
+    padding: 4px 15px;
+}
+
+span.page-numbers {
+    margin-top: 10px;
 }
 
 ul.cat-list {
@@ -131,6 +151,11 @@ i.eicon-share-arrow {
     display: none;
 }
 
-article.elementor-post.elementor-grid-item.status-publish.has-post-thumbnail.hentry.ast-grid-common-col.ast-full-width {
+/* article.elementor-post.elementor-grid-item.status-publish.has-post-thumbnail.hentry.ast-grid-common-col.ast-full-width {
     height: 540px;
+} */
+
+
+img.feat-prods-mb-feat-image {
+    max-width: 350px;
 }
