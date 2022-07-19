@@ -246,7 +246,7 @@ jQuery(document).ready(function () {
     lazyLoad: true,
     loop: true,
     center: true,
-    dots: false,
+    dots: true,
     dotsEach: false,
     autoplay: true,
     nav: true,
