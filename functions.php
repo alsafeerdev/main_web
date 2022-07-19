@@ -262,3 +262,53 @@ function dynamic_video_gallery()
 
 add_shortcode( 'dynamic-video-gallery', 'dynamic_video_gallery' );
 
+// Enable SPAM Filter for Contact forms
+
+function wpf_dev_profanity_filter_paragraph( $field_id, $field_submit, $form_data ) {
+ 
+    // Create your list of profanity words separated by commas
+$blocked_words = array( 
+    'jumboleadmagnet.com',
+    'click here',
+    'Click Now',
+    'FREE',
+    'CLICK HERE',
+    'http://talkwithwebtraffic.com',
+    'Cialis',
+    '.xyz',
+    '.com',
+    '.sale',
+    '.online',
+    '.biz',
+    'visit',
+    'url=',
+    '.ru',
+    'fuck',
+    'https://adultgames.life/',
+    '.life',
+    
+);
+
+foreach( $blocked_words as $word ) {
+    if(preg_match( '/\b' .$word. '\b/i', $field_submit )) {
+        wpforms()->process->errors[ $form_data[ 'id' ] ][ $field_id ] = esc_html__( 'NO SPAM MESSAGES ALLOWED./ اية رسائل مزعجة وغير حقيقية غير مسموح بها', 'plugin-domain' );
+        return;
+    }
+}
+
+}
+
+add_action( 'wpforms_process_validate_textarea', 'wpf_dev_profanity_filter_paragraph', 10, 3 );
+
+
+function wpf_dev_check_for_urls( $field_id, $field_submit, $form_data ) {
+
+if( strpos($field_submit, 'http') !== false || strpos($field_submit, 'www.') !== false || strpos($field_submit, 'https') !== false ) {
+    wpforms()->process->errors[ $form_data['id'] ][ $field_id ] = esc_html__( 'NO SPAM MESSAGES ALLOWED./ اية رسائل مزعجة وغير حقيقية غير مسموح بها', 'wpforms' );
+    return;
+} 
+ 
+}
+
+add_action( 'wpforms_process_validate_textarea', 'wpf_dev_check_for_urls', 10, 3 );
+add_action( 'wpforms_process_validate_text', 'wpf_dev_check_for_urls', 10, 3 ); 
