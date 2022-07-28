@@ -17,3 +17,7 @@ Every time you push to origin. it will be automatically deployed to file server.
 1. Migrated part development with staging environemt
 2. Updated Video gallery to support both MP4 and WEBM.
 3. Added poster image as fallback image in video gallery
+
+# 28 - 07 - 2022
+
+1. Optimized CSS

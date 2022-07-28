@@ -169,10 +169,6 @@ span.page-numbers.next {
   display: none;
 }
 
-ul.cat-list {
-  margin-left: 0;
-}
-
 /* PRODUCT ARCHIVE GRID STYLES END */
 
 /* COUNTER SUFFIX */
@@ -230,11 +226,6 @@ img.feat-prods-feat-image {
 
 .feat-prods-content-container {
   padding: 26px 15px 45px 15px;
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-start;
   min-height: 320px;
 }
 
@@ -305,17 +296,6 @@ img.promo-feat-image {
   border-radius: 10px 10px 0px 0px;
 }
 
-.promotion-container {
-  border-radius: 10px;
-  box-shadow: 0px 0px 12px -3px #00000070;
-}
-
-.promo-content {
-  padding: 26px 20px 36px 20px;
-  border-radius: 0px 0px 10px 10px;
-  background: #fff;
-}
-
 p.promo-know-more {
   width: fit-content;
   margin: 0;
@@ -361,11 +341,6 @@ div.dots-light .owl-dots .owl-dot span {
   background: #d1d1d1;
 }
 
-div.promotions-carousel>.owl-stage-outer {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
 #promotions-carousel button.owl-prev {
   position: relative;
   right: 5px;
@@ -394,18 +369,7 @@ img.service-feat-image {
   border-radius: 10px 10px 0px 0px;
 }
 
-.service-content {
-  padding: 26px 20px 36px 20px;
-  border-radius: 0px 0px 10px 10px;
-  background: #fff;
-}
-
 .service-content.text-center {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  align-items: center;
-  justify-content: flex-start;
   min-height: 270px;
 }
 
@@ -426,15 +390,6 @@ div.light .owl-nav [class*="owl-"]:hover {
   border-radius: 5px;
 }
 
-.light-nav:hover>svg {
-  fill: #ffffff;
-}
-
-.owl-theme .owl-dots {
-  text-align: center;
-  -webkit-tap-highlight-color: transparent;
-}
-
 div.services-carousel .owl-dots {
   margin-top: 35px;
 }
@@ -447,21 +402,7 @@ a.service-link {
   text-decoration: none !important;
 }
 
-div.services-carousel>.owl-stage-outer {
-  padding-top: 10px;
-  padding-bottom: 10px;
-}
-
-.services-container {
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0px 0px 12px -3px #00000070;
-}
-
 /* Services Dark BG */
-.dark-nav:hover>svg {
-  fill: #000000;
-}
 
 #services-carousel button.owl-prev {
   position: relative;
@@ -563,11 +504,6 @@ div.portfolio-carousel .owl-nav {
 
 .cust-nav:hover>svg.hover-white {
   fill: #ffffff;
-}
-
-.owl-theme .owl-dots {
-  text-align: center;
-  -webkit-tap-highlight-color: transparent;
 }
 
 a.portfolio-link {
@@ -719,4 +655,25 @@ h3.title-fs-18 {
   align-content: center;
   align-items: center;
   padding: 10px !important;
+}
+
+div.py-10p>.owl-stage-outer {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 26px 20px 36px 20px;
+  border-radius: 0px 0px 10px 10px;
+  background: #fff;
+}
+
+.slider-card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 12px -3px #00000070;
 }
