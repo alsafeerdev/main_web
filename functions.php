@@ -263,7 +263,7 @@ function image_gallery_for_services()
     wp_enqueue_style('image-gallery-services', get_stylesheet_directory_uri() . '/includes/css/min/lightbox.min.css', null, 'all');
 
     ob_start();
-    get_template_part('includes/immage', 'gallery');
+    get_template_part('includes/image', 'gallery');
     return ob_get_clean();
 }
 add_shortcode('image-gallery-services', 'image_gallery_for_services');

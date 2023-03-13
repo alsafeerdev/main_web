@@ -6,7 +6,7 @@
         ?>
             <div class="col-md-3">
                 <a href="<?php echo $image['url']; ?>" data-lightbox="image-1" data-title="<?php echo $image['title']; ?>">
-                    <img src="<?php echo $image['sizes']['medium']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" class="lazyload" alt="<?php echo $image['alt']; ?>">
+                    <img src="<?php echo $image['sizes']['medium']; ?>" data-src="<?php echo $image['sizes']['large']; ?>" class="lazy" alt="<?php echo $image['alt']; ?>">
                 </a>
             </div>
         <?php } ?>
