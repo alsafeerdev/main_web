@@ -267,3 +267,4 @@ function image_gallery_for_services()
     return ob_get_clean();
 }
 add_shortcode('image-gallery-services', 'image_gallery_for_services');
+
