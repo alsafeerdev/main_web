@@ -258,7 +258,9 @@ function image_gallery_for_services()
 {
 
     wp_enqueue_script('image-gallery-services', get_stylesheet_directory_uri() . '/includes/js/min/image-gallery-services.min.js', null, false);
+    wp_enqueue_script('image-gallery-services', get_stylesheet_directory_uri() . '/includes/js/min/lightbox.min.js', null, false);
     wp_enqueue_style('image-gallery-services', get_stylesheet_directory_uri() . '/includes/css/min/image-gallery-services.min.css', null, 'all');
+    wp_enqueue_style('image-gallery-services', get_stylesheet_directory_uri() . '/includes/css/min/lightbox.min.css', null, 'all');
 
     ob_start();
     get_template_part('includes/immage', 'gallery');
